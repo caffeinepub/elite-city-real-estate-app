@@ -1,0 +1,43 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-prominent-call-to-action-button-or-link-in-the-hero-section-that-directs-users-to-https-plots99-com-co-hdp4jumjqhvs-info-with-text-like-view-full-listing-or-book-now-on-plots99",
+      "featureTitle": "Add a prominent call-to-action button or link in the hero section that directs users to https://plots99.com/co/HDp4JumjqHvs#info with text like 'View Full Listing' or 'Book Now on Plots99'",
+      "files": [
+        "frontend/src/components/HeroBanner.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-plots99-com-listing-link-to-the-footer-contact-section-as-an-additional-contact-method-alongside-phone-number-and-address",
+      "featureTitle": "Add the plots99.com listing link to the footer contact section as an additional contact method alongside phone number and address",
+      "files": [
+        "frontend/src/components/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

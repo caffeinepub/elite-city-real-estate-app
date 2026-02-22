@@ -1,0 +1,61 @@
+{
+  "kind": "build_request",
+  "title": "Add external listing link to plots99.com",
+  "projectName": "Elite India Real Estate",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-20",
+      "text": "Add a prominent call-to-action button or link in the hero section that directs users to https://plots99.com/co/HDp4JumjqHvs#info with text like 'View Full Listing' or 'Book Now on Plots99'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "https://plots99.com/co/HDp4JumjqHvs#info",
+          "Add this link"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Link to https://plots99.com/co/HDp4JumjqHvs#info is visible in the hero section",
+        "Button or link uses premium styling consistent with Elite India brand theme",
+        "Link opens in a new tab (target='_blank' with rel='noopener noreferrer')",
+        "Call-to-action text clearly indicates the purpose of the external link"
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "text": "Add the plots99.com listing link to the footer contact section as an additional contact method alongside phone number and address",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "https://plots99.com/co/HDp4JumjqHvs#info"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer includes a labeled link to https://plots99.com/co/HDp4JumjqHvs#info",
+        "Link is styled consistently with other footer contact information",
+        "Link opens in a new tab",
+        "Link label clearly identifies it as a plots99.com listing"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify backend/main.mo",
+    "Maintain existing premium visual theme with gold and deep red accents",
+    "Keep existing hero section layout structure while adding the new link"
+  ],
+  "nonGoals": [
+    "Embedding plots99.com content directly in the app",
+    "Creating a new dedicated page for the external listing",
+    "Adding analytics tracking for the external link"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

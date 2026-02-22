@@ -1,0 +1,19 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the header, homepage content, footer, and toast notifications in a full-height layout.",
+  "frontend/src/components/Header.tsx": "Sticky header component displaying Elite India Projects branding with trophy logo, DTCP/RERA certification badges, and prominent contact number 9848525246 with phone icon in the top-right corner.",
+  "frontend/src/components/Footer.tsx": "Footer component with company information, project links showing correct acreage, contact details including phone number 9848525246 and a new plots99.com listing link, and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/pages/HomePage.tsx": "Main landing page that orchestrates all sections including hero banner, project showcase, details, amenities, approvals, layout gallery, video gallery, location, pricing, and inquiry form.",
+  "frontend/src/components/HeroBanner.tsx": "Hero section with full-width banner image, company tagline, call-to-action buttons including a new prominent \"View Full Listing\" button linking to plots99.com, and marketing poster section displaying the uploaded comprehensive project overview image with zoom/dialog functionality.",
+  "frontend/src/components/ProjectShowcase.tsx": "Displays three project cards (Elite Township 23 acres, Elite City Phase-1 6 acres, Elite City Premium Phase-2 10 acres) with images, locations, and updated area specifications.",
+  "frontend/src/components/ProjectDetails.tsx": "Shows project specifications including Elite City Phase-1 (6 acres), Elite Township (23 acres), total portfolio (39 acres), plot sizes, and HMDA layout approval in a grid of cards.",
+  "frontend/src/components/Amenities.tsx": "Grid layout displaying 14 world-class amenities with icons and images including CC roads, underground utilities, swimming pool, parks, and sports facilities.",
+  "frontend/src/components/Approvals.tsx": "Displays DTCP and RERA approval credentials for all three projects with checkmark indicators, clear legal documents verification, and new section showing the DTCP-approved layout plan image with zoom capability.",
+  "frontend/src/components/LocationConnectivity.tsx": "Shows 4 major highway connections and 8 key landmarks including RRR station, sub-registrar office, schools, hospital, and Surylatha Spinning Mill.",
+  "frontend/src/components/PricingDetails.tsx": "Displays pricing for all five project tiers in Indian Rupees per sq. yard with updated location descriptions showing correct acreage (Elite Township 23 acres, Elite City Phase-1 6 acres, Elite City Premium Phase-2 10 acres).",
+  "frontend/src/components/InquiryForm.tsx": "Contact form with validation for potential buyers to submit inquiries, pre-filled with contact number 9848525246 in the phone field, updated project options showing correct acreage, and backend integration.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook for submitting inquiry form data to the backend using the actor interface.",
+  "frontend/src/index.css": "Global styles with premium real estate theme using OKLCH color system, featuring elite gold and deep red accent colors for both light and dark modes, with added aspect-ratio utility for video containers.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with elite-gold and elite-red color tokens, custom font families, and premium design system utilities.",
+  "frontend/src/components/LayoutGallery.tsx": "Dedicated layout gallery component displaying the DTCP-approved layout plan image with zoom functionality via Dialog, featuring elite-gold accents, hover effects, and key project statistics in a premium card layout.",
+  "frontend/src/components/VideoGallery.tsx": "Video gallery component showcasing six promotional videos in a responsive grid with custom play controls, elite-red play buttons, hover effects, and a call-to-action card for site visits."
+}

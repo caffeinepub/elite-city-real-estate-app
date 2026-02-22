@@ -1,0 +1,15 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T19:23:45.358Z",
+  "summary": "All requirements have been implemented. REQ-20 adds a prominent 'View Full Listing' button with ExternalLink icon in the hero section, using elite-red premium styling, opening in a new tab with proper security attributes. REQ-21 adds a labeled plots99.com link in the footer contact section with consistent styling and new tab behavior. No missing requirements or hallucinated features detected.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.95,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeroBanner.tsx",
+    "project_state.json"
+  ]
+}

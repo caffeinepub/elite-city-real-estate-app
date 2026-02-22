@@ -1,0 +1,41 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add external listing link to plots99.com",
+  "requirements": [
+    {
+      "id": "REQ-20",
+      "summary": "Add a prominent call-to-action button in the hero section directing users to the plots99.com listing",
+      "acceptanceCriteria": [
+        "Link to https://plots99.com/co/HDp4JumjqHvs#info is visible in the hero section",
+        "Button or link uses premium styling consistent with Elite India brand theme",
+        "Link opens in a new tab (target='_blank' with rel='noopener noreferrer')",
+        "Call-to-action text clearly indicates the purpose of the external link"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroBanner.tsx",
+          "operation": "modify",
+          "description": "Add a prominent call-to-action button or link with text 'View Full Listing' or 'Book Now on Plots99' that directs users to https://plots99.com/co/HDp4JumjqHvs#info. Position it prominently within the existing hero banner layout alongside or near the existing call-to-action buttons. Apply premium styling using the elite-gold accent color from the existing theme to maintain visual consistency. Ensure the link opens in a new tab with target='_blank' and rel='noopener noreferrer' for security."
+        }
+      ]
+    },
+    {
+      "id": "REQ-21",
+      "summary": "Add the plots99.com listing link to the footer contact section as an additional contact method",
+      "acceptanceCriteria": [
+        "Footer includes a labeled link to https://plots99.com/co/HDp4JumjqHvs#info",
+        "Link is styled consistently with other footer contact information",
+        "Link opens in a new tab",
+        "Link label clearly identifies it as a plots99.com listing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Add the plots99.com listing link to the contact section alongside the existing phone number and address. Include a clear label such as 'View Listing' or 'Plots99 Listing' with an appropriate icon (e.g., ExternalLink from lucide-react). Style the link consistently with the existing footer contact information using the same text color and hover effects. Ensure the link opens in a new tab with target='_blank' and rel='noopener noreferrer'. Place it as an additional contact method in the same contact details structure."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T19:23:45.361Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-20",
+        "summary": "Add a prominent call-to-action button or link in the hero section that directs users to https://plots99.com/co/HDp4JumjqHvs#info with text like 'View Full Listing' or 'Book Now on Plots99'",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroBanner.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroBanner.tsx"
+        ]
+      },
+      {
+        "id": "REQ-21",
+        "summary": "Add the plots99.com listing link to the footer contact section as an additional contact method alongside phone number and address",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Footer.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeroBanner.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

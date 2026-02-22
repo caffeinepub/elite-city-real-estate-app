@@ -1,0 +1,260 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Real estate app for Elite India Project Private Limited showcasing Elite City Kalvakurthi venture - 8 acres with CC Road, underground drainage and electricity infrastructure",
+  "architectural_notes": [
+    "Real estate property showcase application",
+    "Focus on single venture: Elite City Kalvakurthi",
+    "Display contact number 9848525246 in multiple locations (header, footer, contact form)",
+    "Integrate user-uploaded images: DTCP layout plan and marketing poster",
+    "Update project areas: Elite City Phase-1 (6 acres), Elite City Premium Phase-2 (10 acres), Elite Township (23 acres)",
+    "Add layout gallery section with zoom/view functionality for DTCP layout plans",
+    "Implement video gallery/media section supporting video URLs and uploads",
+    "Reference design inspiration from modern real estate sites (plots99.com pattern)",
+    "Include external reference link: https://plots99.com/co/HDp4JumjqHvs#info"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-display-company-branding-header-with-elite-india-projects-private-limited-name-golden-trophy-logo-dtcp-and-rera-approval-badges",
+      "title": "Display company branding header with Elite India Projects Private Limited name, golden trophy logo, DTCP and RERA approval badges",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-project-showcase-section-displaying-three-ventures-elite-township-j-p-nagar-elite-city-kalvakurthi-and-elite-city-premium-municipality-limits",
+      "title": "Create project showcase section displaying three ventures: Elite Township (J.P. Nagar), Elite City (Kalvakurthi), and Elite City Premium (Municipality Limits)",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-elite-city-kalvakurthi-project-details-including-8-acres-area-phase-information-6-acres-phase-1-total-39-acres-across-all-projects-with-633-plots-plot-sizes-ranging-from-146-to-330-sq-yards-and-hmda-layout-design",
+      "title": "Display Elite City Kalvakurthi project details including 8 acres area, phase information (6 acres Phase-1), total 39 acres across all projects with 633 plots, plot sizes ranging from 146 to 330 sq. yards, and HMDA layout design",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-world-class-amenities-section-listing-40ft-33ft-cc-roads-underground-electricity-drainage-system-water-connections-2-per-plot-solar-street-lights-avenue-plantation-grand-entrance-arch-resort-style-swimming-pool-parks-and-play-area-open-gym-jogging-track-indoor-sports-cricket-net-courts-and-overhead-water-tank",
+      "title": "Create world-class amenities section listing: 40ft & 33ft CC Roads, underground electricity, drainage system, water connections (2 per plot), solar street lights, avenue plantation, grand entrance arch, resort-style swimming pool, parks and play area, open gym, jogging track, indoor sports, cricket net courts, and overhead water tank",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-approval-credentials-section-showing-elite-city-dtcp-tlp-no-94-2025-h-rera-no-po1600010279-elite-township-dtcp-tlp-no-123-204-h-rera-no-po1600009014-elite-city-premium-approval-process-ongoing-status-and-clear-legal-documents-verification",
+      "title": "Display approval credentials section showing Elite City DTCP TLP No.94/2025/H, RERA No: PO1600010279, Elite Township DTCP TLP No.123/204/H, RERA No: PO1600009014, Elite City Premium approval process ongoing status, and clear legal documents verification",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-prime-location-connectivity-section-displaying-4-major-highways-west-to-raichur-east-to-kodad-north-to-hyderabad-south-to-chennai-15-minutes-to-rrr-railway-line-survey-completion-main-gate-at-tirupati-bypass-road-sub-registrar-office-200-meters-away-proximity-to-schools-colleges-hospital-mini-cricket-stadium-and-surylatha-spinning-mill-500-meters-with-1000-jobs",
+      "title": "Create prime location connectivity section displaying 4 major highways (West to Raichur, East to Kodad, North to Hyderabad, South to Chennai), 15 minutes to RRR, railway line survey completion, main gate at Tirupati Bypass Road, sub-registrar office 200 meters away, proximity to schools/colleges/hospital, mini cricket stadium, and Surylatha Spinning Mill 500 meters with 1000+ jobs",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-pricing-details-section-showing-elite-township-at-9-499-per-sq-yard-elite-city-phase-1-at-19-999-per-sq-yard-phase-2-at-17-999-per-sq-yard-elite-city-premium-at-19-999-per-sq-yard-and-commercial-plots-at-25-000-per-sq-yard-tirupati-bypass",
+      "title": "Display pricing details section showing Elite Township at ₹9,499/- per sq. yard, Elite City Phase-1 at ₹19,999/- per sq. yard, Phase 2 at ₹17,999/- per sq. yard, Elite City Premium at ₹19,999/- per sq. yard, and Commercial Plots at ₹25,000/- per sq. yard (Tirupati Bypass)",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-contact-inquiry-form-allowing-potential-buyers-to-submit-interest-for-plot-booking",
+      "title": "Implement contact/inquiry form allowing potential buyers to submit interest for plot booking",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-premium-real-estate-visual-theme-with-gold-and-deep-red-accent-colors-elegant-typography-and-luxury-real-estate-imagery-that-reflects-the-elite-brand-positioning",
+      "title": "Design a premium real estate visual theme with gold and deep red accent colors, elegant typography, and luxury real estate imagery that reflects the Elite brand positioning",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-contact-number-9848525246-prominently-in-the-header-top-right-corner-or-as-a-sticky-call-button-footer-contact-section-and-pre-fill-it-in-the-inquiry-form-s-phone-field",
+      "title": "Add contact number 9848525246 prominently in the header (top-right corner or as a sticky call button), footer (contact section), and pre-fill it in the inquiry form's phone field",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-uploaded-dtcp-approved-layout-plan-image-screenshot-20260222-232615-adobe-acrobat-png-showing-tlp-no-94-2025-h-residential-plot-layout-in-the-project-details-or-approvals-section-with-appropriate-sizing-and-zoom-capability",
+      "title": "Display the uploaded DTCP-approved layout plan image (Screenshot_20260222-232615.Adobe Acrobat.png showing TLP No.94/2025/H residential plot layout) in the project details or approvals section with appropriate sizing and zoom capability",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-uploaded-marketing-poster-image-screenshot-20260222-234056-whatsapp-1-png-showing-all-three-ventures-with-complete-project-details-as-a-featured-visual-in-the-hero-section-or-as-a-dedicated-project-overview-section",
+      "title": "Display the uploaded marketing poster image (Screenshot_20260222-234056.WhatsApp-1.png showing all three ventures with complete project details) as a featured visual in the hero section or as a dedicated project overview section",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-elite-city-kalvakurthi-phase-1-area-display-from-the-current-value-to-6-acres-as-shown-in-the-marketing-poster",
+      "title": "Update Elite City Kalvakurthi Phase-1 area display from the current value to 6 acres as shown in the marketing poster",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-elite-city-premium-description-from-municipality-limits-to-phase-2-10-acres-to-match-the-marketing-poster-specification",
+      "title": "Update Elite City Premium description from 'Municipality Limits' to 'Phase-2 - 10 Acres' to match the marketing poster specification",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-elite-township-area-from-the-current-display-to-23-acres-as-specified-in-the-marketing-poster-project-details-section",
+      "title": "Update Elite Township area from the current display to 23 acres as specified in the marketing poster project details section",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-dedicated-layout-gallery-section-that-displays-the-dtcp-approved-layout-plan-image-screenshot-20260222-232615-adobe-acrobat-png-with-zoom-and-pan-functionality-allowing-users-to-view-plot-details-in-high-resolution",
+      "title": "Create a dedicated layout gallery section that displays the DTCP-approved layout plan image (Screenshot_20260222-232615.Adobe Acrobat.png) with zoom and pan functionality, allowing users to view plot details in high resolution",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-video-media-gallery-section-that-supports-displaying-promotional-videos-with-options-for-embedded-youtube-vimeo-urls-and-direct-video-file-uploads-styled-consistently-with-the-premium-elite-india-brand-theme",
+      "title": "Create a video/media gallery section that supports displaying promotional videos with options for embedded YouTube/Vimeo URLs and direct video file uploads, styled consistently with the premium Elite India brand theme",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-visual-design-of-the-layout-and-video-sections-with-modern-real-estate-presentation-styles-inspired-by-contemporary-property-showcase-websites-ensuring-premium-aesthetic-consistent-with-elite-india-s-luxury-positioning",
+      "title": "Enhance the visual design of the layout and video sections with modern real estate presentation styles inspired by contemporary property showcase websites, ensuring premium aesthetic consistent with Elite India's luxury positioning",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-prominent-call-to-action-button-or-link-in-the-hero-section-that-directs-users-to-https-plots99-com-co-hdp4jumjqhvs-info-with-text-like-view-full-listing-or-book-now-on-plots99",
+      "title": "Add a prominent call-to-action button or link in the hero section that directs users to https://plots99.com/co/HDp4JumjqHvs#info with text like 'View Full Listing' or 'Book Now on Plots99'",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-plots99-com-listing-link-to-the-footer-contact-section-as-an-additional-contact-method-alongside-phone-number-and-address",
+      "title": "Add the plots99.com listing link to the footer contact section as an additional contact method alongside phone number and address",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Display company information (Elite India Project Private Limited)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Showcase Elite City Kalvakurthi venture details",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Display property specifications (8 acres, CC Road, underground drainage, underground electricity)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Create backend data model to store project information including company details, venture data, specifications, amenities, approvals, location connectivity, and pricing",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add contact number 9848525246 prominently in header, footer, and contact form",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Display uploaded DTCP-approved layout plan image and marketing poster image in the app",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Update Elite City Phase-1 area from 8 acres to 6 acres to match marketing poster",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Update Elite City Premium from 'Municipality Limits' to 'Phase-2 - 10 Acres'",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Update Elite Township area to 23 acres as shown in marketing poster",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add dedicated layout display section with DTCP-approved layout plan and zoom/gallery functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Create video/media gallery section for promotional videos with support for uploaded videos and external URLs",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Add link to https://plots99.com/co/HDp4JumjqHvs#info in the app",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Elite City Real Estate App",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
