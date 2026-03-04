@@ -1,90 +1,195 @@
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Building,
-  Droplets,
+  Building2,
+  Camera,
   Dumbbell,
+  Flame,
   Footprints,
+  Leaf,
+  Lightbulb,
+  MapPin,
+  ShieldCheck,
+  Siren,
   Sun,
   Trees,
   Trophy,
+  Tv2,
   Waves,
+  Wifi,
+  Wind,
   Zap,
 } from "lucide-react";
 
-const amenities = [
+type Amenity = {
+  icon: React.ElementType;
+  title: string;
+  description: string;
+  category: string;
+};
+
+const amenities: Amenity[] = [
+  // Infrastructure
   {
-    icon: "/assets/generated/cc-road-icon.dim_64x64.png",
-    title: "40ft & 33ft CC Roads",
-    description: "Wide concrete roads for smooth connectivity",
+    icon: MapPin,
+    title: "Plots & Townships",
+    description: "Residential & township plots",
+    category: "Infrastructure",
   },
   {
-    icon: "/assets/generated/electricity-icon.dim_64x64.png",
+    icon: Waves,
+    title: "40ft / 33ft CC Roads",
+    description: "Wide concrete roads for smooth connectivity",
+    category: "Infrastructure",
+  },
+  {
+    icon: Lightbulb,
+    title: "Radium Lights",
+    description: "Radium glow lighting for safe nights",
+    category: "Infrastructure",
+  },
+  {
+    icon: Zap,
     title: "Underground Electricity",
     description: "Modern underground power infrastructure",
+    category: "Infrastructure",
   },
   {
-    icon: "/assets/generated/drainage-icon.dim_64x64.png",
-    title: "Underground Drainage",
-    description: "Advanced drainage system",
+    icon: Wind,
+    title: "Drainage",
+    description: "Advanced underground drainage system",
+    category: "Infrastructure",
   },
   {
-    iconComponent: Droplets,
-    title: "Water Connections",
-    description: "2 connections per plot",
+    icon: Wifi,
+    title: "Geo Fiber",
+    description: "High-speed geo fiber internet",
+    category: "Infrastructure",
   },
   {
-    iconComponent: Sun,
-    title: "Solar Street Lights",
-    description: "Eco-friendly lighting",
+    icon: Building,
+    title: "Water Tank",
+    description: "Overhead water storage & supply",
+    category: "Infrastructure",
   },
   {
-    iconComponent: Trees,
+    icon: Waves,
+    title: "Water Taps (2 per plot)",
+    description: "Dedicated water tap for every plot",
+    category: "Infrastructure",
+  },
+  {
+    icon: Footprints,
+    title: "6ft Footpaths",
+    description: "Safe pedestrian pathways",
+    category: "Infrastructure",
+  },
+  {
+    icon: Trees,
     title: "Avenue Plantation",
-    description: "Green landscaping",
+    description: "Lush green tree-lined avenues",
+    category: "Infrastructure",
   },
   {
-    image: "/assets/generated/entrance-arch.dim_400x300.png",
-    title: "Grand Entrance Arch",
-    description: "Impressive main entrance",
+    icon: Flame,
+    title: "Stormwater",
+    description: "Effective stormwater management",
+    category: "Infrastructure",
   },
   {
-    image: "/assets/generated/swimming-pool.dim_400x300.png",
-    title: "Resort-Style Swimming Pool",
-    description: "Luxury pool facility",
+    icon: Sun,
+    title: "Solar Lights",
+    description: "Eco-friendly solar street lighting",
+    category: "Infrastructure",
+  },
+  // Community Features
+  {
+    icon: ShieldCheck,
+    title: "Compound Wall",
+    description: "Secured compound wall perimeter",
+    category: "Community",
   },
   {
-    image: "/assets/generated/parks-playground.dim_400x300.png",
-    title: "Parks & Play Area",
-    description: "Family-friendly spaces",
+    icon: Building2,
+    title: "Main Arch",
+    description: "Impressive grand entrance arch",
+    category: "Community",
   },
   {
-    iconComponent: Dumbbell,
+    icon: Tv2,
+    title: "Lift & View Room",
+    description: "Panoramic view room with lift access",
+    category: "Community",
+  },
+  {
+    icon: Leaf,
+    title: "Open Parks",
+    description: "Spacious landscaped parks",
+    category: "Community",
+  },
+  {
+    icon: Trees,
+    title: "2 Gazebos",
+    description: "Decorative outdoor gazebo shelters",
+    category: "Community",
+  },
+  {
+    icon: Siren,
+    title: "Play Area",
+    description: "Safe children's play area",
+    category: "Community",
+  },
+  // Sports & Recreation
+  {
+    icon: Dumbbell,
     title: "Open Gym",
-    description: "Outdoor fitness area",
+    description: "Outdoor fitness & exercise zone",
+    category: "Sports",
   },
   {
-    iconComponent: Footprints,
+    icon: Footprints,
     title: "Jogging Track",
-    description: "Dedicated running path",
+    description: "Dedicated running & walking track",
+    category: "Sports",
   },
   {
-    iconComponent: Trophy,
+    icon: Trophy,
     title: "Indoor Sports",
-    description: "Multi-purpose sports facility",
+    description: "Multi-purpose indoor sports facility",
+    category: "Sports",
   },
   {
-    iconComponent: Trophy,
-    title: "Cricket Net Courts",
-    description: "Practice cricket facilities",
+    icon: Trophy,
+    title: "Net Practice Box Cricket",
+    description: "Cricket net practice courts",
+    category: "Sports",
   },
+  // Security
   {
-    iconComponent: Building,
-    title: "Overhead Water Tank",
-    description: "24/7 water supply",
+    icon: Camera,
+    title: "24/7 CCTV",
+    description: "Round-the-clock surveillance cameras",
+    category: "Security",
   },
 ];
 
+const categoryColors: Record<string, string> = {
+  Infrastructure: "text-blue-500",
+  Community: "text-green-500",
+  Sports: "text-orange-500",
+  Security: "text-red-500",
+};
+
+const categoryBgs: Record<string, string> = {
+  Infrastructure: "bg-blue-500/10 group-hover:bg-blue-500/20",
+  Community: "bg-green-500/10 group-hover:bg-green-500/20",
+  Sports: "bg-orange-500/10 group-hover:bg-orange-500/20",
+  Security: "bg-red-500/10 group-hover:bg-red-500/20",
+};
+
 export default function Amenities() {
+  const categories = ["Infrastructure", "Community", "Sports", "Security"];
+
   return (
     <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
       <div className="container">
@@ -98,45 +203,51 @@ export default function Amenities() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {amenities.map((amenity) => {
-            const IconComponent = amenity.iconComponent;
-            return (
-              <Card
-                key={amenity.title}
-                className="group hover:shadow-lg transition-all duration-300 hover:border-elite-gold/50"
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 flex justify-center">
-                    {amenity.icon && (
-                      <img
-                        src={amenity.icon}
-                        alt={amenity.title}
-                        className="h-16 w-16 object-contain"
-                      />
-                    )}
-                    {amenity.image && (
-                      <img
-                        src={amenity.image}
-                        alt={amenity.title}
-                        className="h-32 w-full object-cover rounded-lg"
-                      />
-                    )}
-                    {IconComponent && (
-                      <div className="p-4 rounded-lg bg-elite-gold/10 group-hover:bg-elite-gold/20 transition-colors">
-                        <IconComponent className="h-8 w-8 text-elite-gold" />
-                      </div>
-                    )}
-                  </div>
-                  <h3 className="font-bold mb-2">{amenity.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {amenity.description}
-                  </p>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+        {categories.map((category) => {
+          const categoryAmenities = amenities.filter(
+            (a) => a.category === category,
+          );
+          return (
+            <div key={category} className="mb-10">
+              <h3 className="text-xl font-bold mb-4 text-elite-gold border-b border-elite-gold/30 pb-2">
+                {category}
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {categoryAmenities.map((amenity, idx) => {
+                  const Icon = amenity.icon;
+                  const colorClass =
+                    categoryColors[amenity.category] || "text-elite-gold";
+                  const bgClass =
+                    categoryBgs[amenity.category] ||
+                    "bg-elite-gold/10 group-hover:bg-elite-gold/20";
+                  return (
+                    <Card
+                      key={amenity.title}
+                      data-ocid={`amenity.card.${idx + 1}`}
+                      className="group hover:shadow-lg transition-all duration-300 hover:border-elite-gold/50"
+                    >
+                      <CardContent className="p-5 text-center">
+                        <div className="mb-3 flex justify-center">
+                          <div
+                            className={`p-3 rounded-lg transition-colors ${bgClass}`}
+                          >
+                            <Icon className={`h-6 w-6 ${colorClass}`} />
+                          </div>
+                        </div>
+                        <h4 className="font-bold text-sm mb-1">
+                          {amenity.title}
+                        </h4>
+                        <p className="text-xs text-muted-foreground">
+                          {amenity.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

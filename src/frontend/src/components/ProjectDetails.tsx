@@ -1,36 +1,49 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Building2, FileCheck, MapPinned, Ruler } from "lucide-react";
+import {
+  Building2,
+  FileCheck,
+  Globe,
+  Layers,
+  MapPinned,
+  Ruler,
+} from "lucide-react";
 
 const details = [
+  {
+    icon: Globe,
+    label: "Future Plan",
+    value: "500+ Acres",
+    description: "Visionary mega township development",
+  },
   {
     icon: Building2,
     label: "Elite City Phase-1",
     value: "6 Acres",
-    description: "Kalvakurthi - Currently Available",
-  },
-  {
-    icon: MapPinned,
-    label: "Elite Township",
-    value: "23 Acres",
-    description: "J.P. Nagar",
+    description: "Kalvakurthi Town – Currently Available",
   },
   {
     icon: Building2,
-    label: "Total Portfolio",
-    value: "39 Acres",
-    description: "633 Plots Across All Projects",
+    label: "Elite City Premium Phase-2",
+    value: "10 Acres",
+    description: "Kalvakurthi Town – Premium Plots",
+  },
+  {
+    icon: Layers,
+    label: "Total Development",
+    value: "16 Acres",
+    description: "~300 Plots Across Both Phases",
   },
   {
     icon: Ruler,
     label: "Plot Sizes",
-    value: "146-330 Sq. Yards",
-    description: "Various Options Available",
+    value: "146–330 Sq. Yards",
+    description: "Various Options to Choose From",
   },
   {
     icon: FileCheck,
     label: "Layout Design",
-    value: "HMDA Approved",
-    description: "Modern & Compliant",
+    value: "Modern & Scientific",
+    description: "DTCP Approved, Scientifically Planned",
   },
 ];
 
@@ -49,11 +62,12 @@ export default function ProjectDetails() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {details.map((detail) => {
+          {details.map((detail, index) => {
             const Icon = detail.icon;
             return (
               <Card
                 key={detail.label}
+                data-ocid={`project.card.${index + 1}`}
                 className="group hover:shadow-lg transition-all duration-300 hover:border-elite-gold/50"
               >
                 <CardContent className="p-6">
@@ -65,9 +79,7 @@ export default function ProjectDetails() {
                       <p className="text-sm text-muted-foreground mb-1">
                         {detail.label}
                       </p>
-                      <h3 className="text-2xl font-bold mb-1">
-                        {detail.value}
-                      </h3>
+                      <h3 className="text-xl font-bold mb-1">{detail.value}</h3>
                       <p className="text-sm text-muted-foreground">
                         {detail.description}
                       </p>
@@ -77,6 +89,14 @@ export default function ProjectDetails() {
               </Card>
             );
           })}
+        </div>
+
+        {/* Additional Location indicator */}
+        <div className="mt-8 flex items-center justify-center gap-2 text-muted-foreground">
+          <MapPinned className="h-5 w-5 text-elite-gold" />
+          <span className="text-sm font-medium">
+            Kalvakurthi Town, Nagarkurnool District, Telangana
+          </span>
         </div>
       </div>
     </section>

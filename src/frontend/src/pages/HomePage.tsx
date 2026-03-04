@@ -1,5 +1,6 @@
 import Amenities from "../components/Amenities";
 import Approvals from "../components/Approvals";
+import ContactCTA from "../components/ContactCTA";
 import HeroBanner from "../components/HeroBanner";
 import InquiryForm from "../components/InquiryForm";
 import LayoutGallery from "../components/LayoutGallery";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <VideoGallery />
       <LocationConnectivity />
       <PricingDetails />
+      <ContactCTA />
       <InquiryForm />
     </div>
   );

@@ -1,4 +1,4 @@
-import { ExternalLink, Heart, Mail, MapPin } from "lucide-react";
+import { ExternalLink, Heart, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,6 +11,7 @@ export default function Footer() {
     <footer className="w-full border-t border-border/40 bg-card mt-20">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {/* Brand */}
           <div>
             <h3 className="text-lg font-bold text-elite-gold mb-4">
               Elite India Projects
@@ -33,36 +34,63 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Our Projects */}
           <div>
             <h3 className="text-lg font-bold text-elite-gold mb-4">
               Our Projects
             </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Elite Township - J.P. Nagar (23 Acres)</li>
-              <li>Elite City Phase-1 - Kalvakurthi (6 Acres)</li>
+              <li>Elite Township (23 Acres)</li>
+              <li>Elite City Phase-1 – Kalvakurthi (6 Acres)</li>
+              <li>Elite City Phase-2 – Kalvakurthi</li>
               <li>Elite City Premium Phase-2 (10 Acres)</li>
+              <li>Commercial Plots – Tirupati Bypass</li>
             </ul>
           </div>
 
+          {/* Contact */}
           <div>
             <h3 className="text-lg font-bold text-elite-gold mb-4">
               Contact Us
             </h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" />
-                <span>Kalvakurthi, Telangana</span>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li className="font-semibold text-foreground">
+                N. Ajay Kumar, Elite President
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <span>info@eliteindia.com</span>
+                <Phone className="h-4 w-4 text-elite-gold flex-shrink-0" />
+                <a
+                  href="tel:9848525246"
+                  data-ocid="footer.primary_button"
+                  className="hover:text-elite-gold transition-colors font-medium"
+                >
+                  9848525246
+                </a>
               </li>
               <li className="flex items-center gap-2">
-                <ExternalLink className="h-4 w-4" />
+                <Phone className="h-4 w-4 text-elite-gold flex-shrink-0" />
+                <a
+                  href="tel:7013138131"
+                  data-ocid="footer.secondary_button"
+                  className="hover:text-elite-gold transition-colors font-medium"
+                >
+                  7013138131
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-elite-gold flex-shrink-0 mt-0.5" />
+                <span>
+                  Sri Sri Nagar Colony, Mallareddy Complex, Turkayamjal,
+                  Hyderabad
+                </span>
+              </li>
+              <li className="flex items-center gap-2">
+                <ExternalLink className="h-4 w-4 flex-shrink-0" />
                 <a
                   href="https://plots99.com/co/HDp4JumjqHvs#info"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-ocid="footer.link"
                   className="hover:text-elite-gold transition-colors"
                 >
                   View Listing on Plots99

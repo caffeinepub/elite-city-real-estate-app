@@ -73,7 +73,11 @@ export default function InquiryForm() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              data-ocid="inquiry.panel"
+            >
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name *</Label>
                 <Input
@@ -84,6 +88,7 @@ export default function InquiryForm() {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   required
+                  data-ocid="inquiry.input"
                 />
               </div>
 
@@ -98,6 +103,7 @@ export default function InquiryForm() {
                     setFormData({ ...formData, contact: e.target.value })
                   }
                   required
+                  data-ocid="inquiry.input"
                 />
               </div>
 
@@ -112,6 +118,7 @@ export default function InquiryForm() {
                     setFormData({ ...formData, email: e.target.value })
                   }
                   required
+                  data-ocid="inquiry.input"
                 />
               </div>
 
@@ -123,24 +130,24 @@ export default function InquiryForm() {
                     setFormData({ ...formData, plotNumber: value })
                   }
                 >
-                  <SelectTrigger>
+                  <SelectTrigger data-ocid="inquiry.select">
                     <SelectValue placeholder="Select a project" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="elite-township">
-                      Elite Township - J.P. Nagar (23 Acres)
+                      Elite Township (₹9,499/sqyd)
                     </SelectItem>
                     <SelectItem value="elite-city-phase1">
-                      Elite City Phase-1 - Kalvakurthi (6 Acres)
+                      Elite City Phase-1 – Kalvakurthi (₹19,999/sqyd)
                     </SelectItem>
                     <SelectItem value="elite-city-phase2">
-                      Elite City Phase 2 - Kalvakurthi
+                      Elite City Phase-2 – Kalvakurthi (₹17,999/sqyd)
                     </SelectItem>
                     <SelectItem value="elite-city-premium">
-                      Elite City Premium Phase-2 (10 Acres)
+                      Elite City Premium (₹19,999/sqyd)
                     </SelectItem>
                     <SelectItem value="commercial-plots">
-                      Commercial Plots - Tirupati Bypass
+                      Commercial Plots – Tirupati Bypass (₹25,000/sqyd)
                     </SelectItem>
                   </SelectContent>
                 </Select>
@@ -156,6 +163,7 @@ export default function InquiryForm() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
+                  data-ocid="inquiry.textarea"
                 />
               </div>
 
@@ -164,6 +172,7 @@ export default function InquiryForm() {
                 className="w-full bg-elite-gold hover:bg-elite-gold-dark text-black font-semibold"
                 size="lg"
                 disabled={submitInquiry.isPending}
+                data-ocid="inquiry.submit_button"
               >
                 {submitInquiry.isPending ? (
                   <>
