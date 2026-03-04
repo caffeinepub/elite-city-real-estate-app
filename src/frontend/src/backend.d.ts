@@ -7,12 +7,17 @@ export interface None {
     __kind__: "None";
 }
 export type Option<T> = Some<T> | None;
-export interface Inquiry {
-    contact: string;
-    name: string;
-    email: string;
-    plotNumber: string;
-    message: string;
+export interface PublicProjectView {
+    reraApprovalDetails: string;
+    city: string;
+    state: string;
+    address: string;
+    details: string;
+    specialtyFeatures: string;
+    pincode: string;
+    priceBreakdown: string;
+    location: string;
+    connectivityFeatures: string;
 }
 export interface Project {
     reraApprovalDetails: string;
@@ -26,17 +31,12 @@ export interface Project {
     location: string;
     connectivityFeatures: string;
 }
-export interface PublicProjectView {
-    reraApprovalDetails: string;
-    city: string;
-    state: string;
-    address: string;
-    details: string;
-    specialtyFeatures: string;
-    pincode: string;
-    priceBreakdown: string;
-    location: string;
-    connectivityFeatures: string;
+export interface Inquiry {
+    contact: string;
+    name: string;
+    email: string;
+    plotNumber: string;
+    message: string;
 }
 export interface backendInterface {
     createProject(userId: string, projectData: Project): Promise<void>;

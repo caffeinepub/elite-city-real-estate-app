@@ -1,25 +1,25 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle2, Clock, ZoomIn } from 'lucide-react';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { CheckCircle2, Clock, ZoomIn } from "lucide-react";
 
 const approvals = [
   {
-    project: 'Elite City',
-    dtcp: 'DTCP TLP No.94/2025/H',
-    rera: 'RERA No: PO1600010279',
-    status: 'approved',
+    project: "Elite City",
+    dtcp: "DTCP TLP No.94/2025/H",
+    rera: "RERA No: PO1600010279",
+    status: "approved",
   },
   {
-    project: 'Elite Township',
-    dtcp: 'DTCP TLP No.123/204/H',
-    rera: 'RERA No: PO1600009014',
-    status: 'approved',
+    project: "Elite Township",
+    dtcp: "DTCP TLP No.123/204/H",
+    rera: "RERA No: PO1600009014",
+    status: "approved",
   },
   {
-    project: 'Elite City Premium',
-    dtcp: 'Approval Process',
-    rera: 'Ongoing',
-    status: 'ongoing',
+    project: "Elite City Premium",
+    dtcp: "Approval Process",
+    rera: "Ongoing",
+    status: "ongoing",
   },
 ];
 
@@ -35,15 +35,20 @@ export default function Approvals() {
             All our projects are legally approved with clear documentation
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {approvals.map((approval, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300">
+          {approvals.map((approval) => (
+            <Card
+              key={approval.project}
+              className="hover:shadow-lg transition-all duration-300"
+            >
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-elite-gold">{approval.project}</h3>
+                <h3 className="text-xl font-bold mb-4 text-elite-gold">
+                  {approval.project}
+                </h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    {approval.status === 'approved' ? (
+                    {approval.status === "approved" ? (
                       <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     ) : (
                       <Clock className="h-5 w-5 text-yellow-500 mt-0.5 flex-shrink-0" />
@@ -53,7 +58,7 @@ export default function Approvals() {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    {approval.status === 'approved' ? (
+                    {approval.status === "approved" ? (
                       <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
                     ) : (
                       <Clock className="h-5 w-5 text-yellow-500 mt-0.5 flex-shrink-0" />
@@ -67,7 +72,7 @@ export default function Approvals() {
             </Card>
           ))}
         </div>
-        
+
         <Card className="bg-elite-gold/10 border-elite-gold/30 mb-8">
           <CardContent className="p-6 text-center">
             <div className="flex items-center justify-center gap-2 mb-2">
@@ -75,7 +80,8 @@ export default function Approvals() {
               <h3 className="text-xl font-bold">Clear Legal Documents</h3>
             </div>
             <p className="text-muted-foreground">
-              All projects come with verified and transparent legal documentation
+              All projects come with verified and transparent legal
+              documentation
             </p>
           </CardContent>
         </Card>
@@ -90,13 +96,13 @@ export default function Approvals() {
               Elite City Kalvakurthi - TLP No.94/2025/H
             </p>
           </div>
-          
+
           <Dialog>
             <DialogTrigger asChild>
               <div className="relative max-w-5xl mx-auto cursor-pointer group">
-                <img 
-                  src="/assets/Screenshot_20260222-232615.Adobe Acrobat.png" 
-                  alt="DTCP Approved Layout Plan - Elite City Kalvakurthi" 
+                <img
+                  src="/assets/Screenshot_20260222-232615.Adobe Acrobat.png"
+                  alt="DTCP Approved Layout Plan - Elite City Kalvakurthi"
                   className="w-full h-auto rounded-lg shadow-2xl border-2 border-elite-gold/30 transition-all duration-300 group-hover:border-elite-gold"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 rounded-lg flex items-center justify-center">
@@ -109,9 +115,9 @@ export default function Approvals() {
             </DialogTrigger>
             <DialogContent className="max-w-[95vw] max-h-[95vh] p-2">
               <div className="overflow-auto">
-                <img 
-                  src="/assets/Screenshot_20260222-232615.Adobe Acrobat.png" 
-                  alt="DTCP Approved Layout Plan - Elite City Kalvakurthi" 
+                <img
+                  src="/assets/Screenshot_20260222-232615.Adobe Acrobat.png"
+                  alt="DTCP Approved Layout Plan - Elite City Kalvakurthi"
                   className="w-full h-auto"
                 />
               </div>

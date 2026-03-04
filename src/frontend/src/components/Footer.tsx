@@ -1,55 +1,57 @@
-import { Heart, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { ExternalLink, Heart, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const appIdentifier = typeof window !== 'undefined' 
-    ? encodeURIComponent(window.location.hostname) 
-    : 'elite-city-app';
+  const appIdentifier =
+    typeof window !== "undefined"
+      ? encodeURIComponent(window.location.hostname)
+      : "elite-city-app";
 
   return (
     <footer className="w-full border-t border-border/40 bg-card mt-20">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-bold text-elite-gold mb-4">Elite India Projects</h3>
+            <h3 className="text-lg font-bold text-elite-gold mb-4">
+              Elite India Projects
+            </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Premium gated community projects with world-class amenities and DTCP/RERA approvals.
+              Premium gated community projects with world-class amenities and
+              DTCP/RERA approvals.
             </p>
             <div className="flex gap-2">
-              <img 
-                src="/assets/generated/dtcp-badge.dim_100x100.png" 
-                alt="DTCP" 
+              <img
+                src="/assets/generated/dtcp-badge.dim_100x100.png"
+                alt="DTCP"
                 className="h-10 w-10 object-contain"
               />
-              <img 
-                src="/assets/generated/rera-badge.dim_100x100.png" 
-                alt="RERA" 
+              <img
+                src="/assets/generated/rera-badge.dim_100x100.png"
+                alt="RERA"
                 className="h-10 w-10 object-contain"
               />
             </div>
           </div>
-          
+
           <div>
-            <h3 className="text-lg font-bold text-elite-gold mb-4">Our Projects</h3>
+            <h3 className="text-lg font-bold text-elite-gold mb-4">
+              Our Projects
+            </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Elite Township - J.P. Nagar (23 Acres)</li>
               <li>Elite City Phase-1 - Kalvakurthi (6 Acres)</li>
               <li>Elite City Premium Phase-2 (10 Acres)</li>
             </ul>
           </div>
-          
+
           <div>
-            <h3 className="text-lg font-bold text-elite-gold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-bold text-elite-gold mb-4">
+              Contact Us
+            </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
                 <span>Kalvakurthi, Telangana</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel:9848525246" className="hover:text-elite-gold transition-colors">
-                  9848525246
-                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
@@ -57,9 +59,9 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="h-4 w-4" />
-                <a 
-                  href="https://plots99.com/co/HDp4JumjqHvs#info" 
-                  target="_blank" 
+                <a
+                  href="https://plots99.com/co/HDp4JumjqHvs#info"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-elite-gold transition-colors"
                 >
@@ -69,12 +71,16 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© {currentYear} Elite India Projects Private Limited. All rights reserved.</p>
+          <p>
+            © {currentYear} Elite India Projects Private Limited. All rights
+            reserved.
+          </p>
           <p className="flex items-center gap-1">
-            Built with <Heart className="h-4 w-4 text-elite-red fill-elite-red" /> using{' '}
-            <a 
+            Built with{" "}
+            <Heart className="h-4 w-4 text-elite-red fill-elite-red" /> using{" "}
+            <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`}
               target="_blank"
               rel="noopener noreferrer"

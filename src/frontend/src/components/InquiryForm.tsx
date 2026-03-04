@@ -1,50 +1,67 @@
-import { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useSubmitInquiry } from '../hooks/useQueries';
-import { toast } from 'sonner';
-import { Loader2, Send } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Loader2, Send } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
+import { useSubmitInquiry } from "../hooks/useQueries";
 
 export default function InquiryForm() {
   const [formData, setFormData] = useState({
-    name: '',
-    contact: '9848525246',
-    email: '',
-    message: '',
-    plotNumber: '',
+    name: "",
+    contact: "",
+    email: "",
+    message: "",
+    plotNumber: "",
   });
 
   const submitInquiry = useSubmitInquiry();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.contact || !formData.email) {
-      toast.error('Please fill in all required fields');
+      toast.error("Please fill in all required fields");
       return;
     }
 
     try {
       await submitInquiry.mutateAsync(formData);
-      toast.success('Inquiry submitted successfully! We will contact you soon.');
+      toast.success(
+        "Inquiry submitted successfully! We will contact you soon.",
+      );
       setFormData({
-        name: '',
-        contact: '9848525246',
-        email: '',
-        message: '',
-        plotNumber: '',
+        name: "",
+        contact: "",
+        email: "",
+        message: "",
+        plotNumber: "",
       });
-    } catch (error) {
-      toast.error('Failed to submit inquiry. Please try again.');
+    } catch (_error) {
+      toast.error("Failed to submit inquiry. Please try again.");
     }
   };
 
   return (
-    <section id="inquiry-form" className="py-20 bg-gradient-to-b from-muted/20 to-background">
+    <section
+      id="inquiry-form"
+      className="py-20 bg-gradient-to-b from-muted/20 to-background"
+    >
       <div className="container max-w-2xl">
         <Card className="shadow-xl">
           <CardHeader className="text-center">
@@ -63,7 +80,9 @@ export default function InquiryForm() {
                   id="name"
                   placeholder="Enter your full name"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   required
                 />
               </div>
@@ -73,9 +92,11 @@ export default function InquiryForm() {
                 <Input
                   id="contact"
                   type="tel"
-                  placeholder="9848525246"
+                  placeholder="Enter your phone number"
                   value={formData.contact}
-                  onChange={(e) => setFormData({ ...formData, contact: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, contact: e.target.value })
+                  }
                   required
                 />
               </div>
@@ -87,7 +108,9 @@ export default function InquiryForm() {
                   type="email"
                   placeholder="Enter your email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                 />
               </div>
@@ -96,17 +119,29 @@ export default function InquiryForm() {
                 <Label htmlFor="plotNumber">Interested Project</Label>
                 <Select
                   value={formData.plotNumber}
-                  onValueChange={(value) => setFormData({ ...formData, plotNumber: value })}
+                  onValueChange={(value) =>
+                    setFormData({ ...formData, plotNumber: value })
+                  }
                 >
                   <SelectTrigger>
                     <SelectValue placeholder="Select a project" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="elite-township">Elite Township - J.P. Nagar (23 Acres)</SelectItem>
-                    <SelectItem value="elite-city-phase1">Elite City Phase-1 - Kalvakurthi (6 Acres)</SelectItem>
-                    <SelectItem value="elite-city-phase2">Elite City Phase 2 - Kalvakurthi</SelectItem>
-                    <SelectItem value="elite-city-premium">Elite City Premium Phase-2 (10 Acres)</SelectItem>
-                    <SelectItem value="commercial-plots">Commercial Plots - Tirupati Bypass</SelectItem>
+                    <SelectItem value="elite-township">
+                      Elite Township - J.P. Nagar (23 Acres)
+                    </SelectItem>
+                    <SelectItem value="elite-city-phase1">
+                      Elite City Phase-1 - Kalvakurthi (6 Acres)
+                    </SelectItem>
+                    <SelectItem value="elite-city-phase2">
+                      Elite City Phase 2 - Kalvakurthi
+                    </SelectItem>
+                    <SelectItem value="elite-city-premium">
+                      Elite City Premium Phase-2 (10 Acres)
+                    </SelectItem>
+                    <SelectItem value="commercial-plots">
+                      Commercial Plots - Tirupati Bypass
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -118,12 +153,14 @@ export default function InquiryForm() {
                   placeholder="Any specific requirements or questions?"
                   rows={4}
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                 />
               </div>
 
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full bg-elite-gold hover:bg-elite-gold-dark text-black font-semibold"
                 size="lg"
                 disabled={submitInquiry.isPending}

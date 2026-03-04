@@ -1,11 +1,11 @@
-import { Button } from '@/components/ui/button';
-import { ArrowRight, ZoomIn, ExternalLink } from 'lucide-react';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { ArrowRight, ExternalLink, ZoomIn } from "lucide-react";
 
 export default function HeroBanner() {
   const scrollToInquiry = () => {
-    const inquirySection = document.getElementById('inquiry-form');
-    inquirySection?.scrollIntoView({ behavior: 'smooth' });
+    const inquirySection = document.getElementById("inquiry-form");
+    inquirySection?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -13,57 +13,61 @@ export default function HeroBanner() {
       {/* Hero Section */}
       <div className="relative w-full h-[600px] md:h-[800px]">
         <div className="absolute inset-0">
-          <img 
-            src="/assets/generated/hero-banner.dim_1920x800.png" 
-            alt="Elite City Kalvakurthi" 
+          <img
+            src="/assets/generated/hero-banner.dim_1920x800.png"
+            alt="Elite City Kalvakurthi"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
         </div>
-        
+
         <div className="relative container h-full flex items-center">
           <div className="max-w-2xl text-white space-y-6">
             <div className="inline-block px-4 py-2 bg-elite-gold/20 backdrop-blur-sm rounded-full border border-elite-gold/30">
-              <p className="text-elite-gold font-semibold text-sm">Premium Gated Community Projects</p>
+              <p className="text-elite-gold font-semibold text-sm">
+                Premium Gated Community Projects
+              </p>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Welcome to <span className="text-elite-gold">Elite City</span>
             </h1>
-            
+
             <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-              Experience luxury living in Kalvakurthi with world-class amenities, 
-              DTCP & RERA approved plots, and excellent connectivity to major highways.
+              Experience luxury living in Kalvakurthi with world-class
+              amenities, DTCP & RERA approved plots, and excellent connectivity
+              to major highways.
             </p>
-            
+
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-elite-gold hover:bg-elite-gold-dark text-black font-semibold"
                 onClick={scrollToInquiry}
               >
                 Book Your Plot <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-elite-red hover:bg-elite-red/90 text-white font-semibold"
                 asChild
               >
-                <a 
-                  href="https://plots99.com/co/HDp4JumjqHvs#info" 
-                  target="_blank" 
+                <a
+                  href="https://plots99.com/co/HDp4JumjqHvs#info"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   View Full Listing <ExternalLink className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="border-white text-white hover:bg-white/10"
                 onClick={() => {
-                  const detailsSection = document.getElementById('project-details');
-                  detailsSection?.scrollIntoView({ behavior: 'smooth' });
+                  const detailsSection =
+                    document.getElementById("project-details");
+                  detailsSection?.scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 View Details
@@ -81,16 +85,17 @@ export default function HeroBanner() {
               Complete <span className="text-elite-gold">Project Overview</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Explore all three premium ventures with detailed specifications and amenities
+              Explore all three premium ventures with detailed specifications
+              and amenities
             </p>
           </div>
-          
+
           <Dialog>
             <DialogTrigger asChild>
               <div className="relative max-w-5xl mx-auto cursor-pointer group">
-                <img 
-                  src="/assets/Screenshot_20260222-234056.WhatsApp-1.png" 
-                  alt="Elite India Projects - Complete Overview" 
+                <img
+                  src="/assets/Screenshot_20260222-234056.WhatsApp-1.png"
+                  alt="Elite India Projects - Complete Overview"
                   className="w-full h-auto rounded-lg shadow-2xl border-2 border-elite-gold/30 transition-all duration-300 group-hover:border-elite-gold"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 rounded-lg flex items-center justify-center">
@@ -103,9 +108,9 @@ export default function HeroBanner() {
             </DialogTrigger>
             <DialogContent className="max-w-[95vw] max-h-[95vh] p-2">
               <div className="overflow-auto">
-                <img 
-                  src="/assets/Screenshot_20260222-234056.WhatsApp-1.png" 
-                  alt="Elite India Projects - Complete Overview" 
+                <img
+                  src="/assets/Screenshot_20260222-234056.WhatsApp-1.png"
+                  alt="Elite India Projects - Complete Overview"
                   className="w-full h-auto"
                 />
               </div>

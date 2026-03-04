@@ -4,8 +4,11 @@ import Runtime "mo:core/Runtime";
 import Array "mo:core/Array";
 import Iter "mo:core/Iter";
 import Order "mo:core/Order";
+import MixinStorage "blob-storage/Mixin";
 
 actor {
+  include MixinStorage();
+
   public type Project = {
     address : Text;
     city : Text;

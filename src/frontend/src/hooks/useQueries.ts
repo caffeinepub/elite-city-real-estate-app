@@ -1,5 +1,5 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { useActor } from './useActor';
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useActor } from "./useActor";
 
 interface InquiryFormData {
   name: string;
@@ -15,18 +15,18 @@ export function useSubmitInquiry() {
 
   return useMutation({
     mutationFn: async (data: InquiryFormData) => {
-      if (!actor) throw new Error('Actor not initialized');
-      
+      if (!actor) throw new Error("Actor not initialized");
+
       await actor.submitInquiry(
         data.name,
         data.contact,
         data.email,
         data.message,
-        data.plotNumber
+        data.plotNumber,
       );
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['inquiries'] });
+      queryClient.invalidateQueries({ queryKey: ["inquiries"] });
     },
   });
 }
